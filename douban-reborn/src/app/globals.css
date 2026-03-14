@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  --background: #120908;
+  --foreground: #f4ede3;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-app-sans);
+  --font-display: var(--font-app-display);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-app-sans), "PingFang SC", "Microsoft YaHei", sans-serif;
+  background-image:
+    radial-gradient(circle at top, rgba(247, 178, 106, 0.13), transparent 24%),
+    radial-gradient(circle at 20% 10%, rgba(140, 224, 207, 0.08), transparent 20%),
+    linear-gradient(180deg, #1a0a0a 0%, #110808 34%, #090708 100%);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.17;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 100% 3px, 3px 100%;
+  mix-blend-mode: soft-light;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(247, 178, 106, 0.32);
+  color: #fff8ef;
+}
+
+.font-display {
+  font-family: var(--font-app-display), "STSong", "Songti SC", serif;
+}
