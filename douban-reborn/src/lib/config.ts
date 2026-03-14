@@ -22,3 +22,7 @@ export function getSyncStaleMs() {
 export function getSyncSecret() {
   return process.env.SYNC_SECRET?.trim() || "";
 }
+
+export function getCronSecret() {
+  return process.env.CRON_SECRET?.trim() || "";
+}

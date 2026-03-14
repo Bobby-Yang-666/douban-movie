@@ -19,7 +19,7 @@ export async function POST(request: Request, { params }: RouteContext) {
       content?: unknown;
     };
 
-    createReview(id, {
+    await createReview(id, {
       nickname: String(payload.nickname || ""),
       rating: Number(payload.rating),
       content: String(payload.content || ""),

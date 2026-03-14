@@ -19,7 +19,7 @@ function averageScore(scores: number[]) {
 
 export default async function Home() {
   const movies = await getNowPlayingMovies();
-  const latestSync = getLatestSyncRun();
+  const latestSync = await getLatestSyncRun();
   const featured = movies[0];
   const reviewedMovies = movies.filter((movie) => movie.reviewCount > 0);
   const communityHighlights = reviewedMovies.slice(0, 3);
